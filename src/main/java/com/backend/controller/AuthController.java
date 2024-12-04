@@ -35,7 +35,7 @@ public class AuthController {
       // Chỉ tạo ra access-token cho người dùng loại này. Hết hạn thì phải đăng nhập lại hệ thống.
       String jwt = Jwts.builder().setIssuer("Web Recommendation").setSubject("Access Token")
               .claim("username", data.getEmail())
-              .claim("authorities", "ROLE_USER")
+              .claim("authorities", "USER")
               .setIssuedAt(new Date())
               .setExpiration(new Date((new Date()).getTime() + 3 * 24 * 3600 * 1000L))
               .signWith(secretKey).compact();
