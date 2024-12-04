@@ -42,7 +42,7 @@ public class ProjectConfigSecurity {
     return new WebMvcConfigurer() {
       @Override
       public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**").allowedOrigins("https://frontend-p5rv.vercel.app/", "*").allowCredentials(false).exposedHeaders("*").allowedMethods("*");
+        registry.addMapping("/**").allowedOrigins("*").allowCredentials(false).exposedHeaders("*").allowedMethods("*");
       }
     };
   }
