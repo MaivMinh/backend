@@ -9,23 +9,14 @@ import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseCookie;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.authentication.BadCredentialsException;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.crypto.SecretKey;
 import java.nio.charset.StandardCharsets;
 import java.sql.Timestamp;
 import java.util.Date;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 
 @Slf4j
@@ -52,5 +43,10 @@ public class AuthController {
     } catch (RuntimeException e) {
       return ResponseEntity.ok(new ResponseError(HttpStatus.BAD_REQUEST.value(), "Internal Server Error"));
     }
+  }
+
+  @GetMapping(value = "/profile")
+  public ResponseEntity<ResponseData> getProfile() {
+    return ResponseEntity.ok(new ResponseData(HttpStatus.OK.value(), "Success", Map.of("name", "Mai Văn Minh", "email", "maivanminh.se@gmail.com")));
   }
 }
