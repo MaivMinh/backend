@@ -1,0 +1,9 @@
+/Users/mainga/Desktop/advanced-web/final-project/backend/src/main/java/com/backend/BackendApplication.java
+/Users/mainga/Desktop/advanced-web/final-project/backend/src/main/java/com/backend/aspect/LoggerAspect.java
+/Users/mainga/Desktop/advanced-web/final-project/backend/src/main/java/com/backend/config/ProjectConfigSecurity.java
+/Users/mainga/Desktop/advanced-web/final-project/backend/src/main/java/com/backend/controller/AuthController.java
+/Users/mainga/Desktop/advanced-web/final-project/backend/src/main/java/com/backend/model/FacebookUserData.java
+/Users/mainga/Desktop/advanced-web/final-project/backend/src/main/java/com/backend/model/ResponseError.java
+/Users/mainga/Desktop/advanced-web/final-project/backend/src/main/java/com/backend/response/ResponseData.java
+/Users/mainga/Desktop/advanced-web/final-project/backend/src/main/java/com/backend/security/CustomAccessDeniedHandler.java
+/Users/mainga/Desktop/advanced-web/final-project/backend/src/main/java/com/backend/security/CustomBasicAuthenticationEntryPoint.java
