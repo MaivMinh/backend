@@ -26,8 +26,6 @@ public class ProjectConfigSecurity {
     http.csrf(AbstractHttpConfigurer::disable);
     http
             .authorizeHttpRequests(config -> config
-                    .requestMatchers(
-                            "/api/v1/auth/**", "/api/v1/auth/oauth2/google/**", "/api/v1/auth/oauth2/google").permitAll()
                     .anyRequest().permitAll());
     http.httpBasic(config -> config.authenticationEntryPoint(new CustomBasicAuthenticationEntryPoint()));
     http.exceptionHandling(config -> config.accessDeniedHandler(new CustomAccessDeniedHandler()));
@@ -44,7 +42,7 @@ public class ProjectConfigSecurity {
     return new WebMvcConfigurer() {
       @Override
       public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**").allowedOrigins("*").allowCredentials(false).exposedHeaders("*").allowedMethods("*");
+        registry.addMapping("/**").allowedOrigins("https://frontend-p5rv.vercel.app/", "*").allowCredentials(false).exposedHeaders("*").allowedMethods("*");
       }
     };
   }
