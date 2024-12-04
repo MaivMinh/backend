@@ -1,7 +1,7 @@
 name: Build and deploy a container to an Azure Web App
 
 env:
-  AZURE_WEBAPP_NAME: auth-backend
+  AZURE_WEBAPP_NAME: auth-server
 
 on:
   push:
