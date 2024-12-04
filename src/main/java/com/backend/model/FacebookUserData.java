@@ -6,7 +6,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class FacebookUserData {
-  private String email;
-  private String id;
-  private String name;
+  private String email; // email
+  private String id;  // username
+  private String name;  // name
 }
